@@ -1,0 +1,78 @@
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+.reg {
+  max-width: 400px;
+  margin: 50px auto;
+  background-color:darkslateblue;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.reg h2 {
+  text-align: center;
+  color: #f4f0f0;
+  margin: 20px 0;
+}
+
+.reg form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.reg label {
+  color: #f8f4f4;
+  margin: 15px 0px;
+}
+
+.reg input[type="text"],
+.reg input[type="email"],
+.reg input[type="password"],
+.reg textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.reg .gender,
+.reg .role {
+  margin-top: 20px;
+}
+
+.reg .gender label,
+.reg .role label {
+  margin-right: 10px;
+}
+
+.reg input[type="radio"] {
+  margin-top: 5px;
+}
+
+.reg label {
+  margin-top: 20px;
+}
+
+.reg input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reg input[type="submit"]:hover {
+  background-color: #fff;
+  color: #000;
+}

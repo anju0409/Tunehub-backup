@@ -1,0 +1,62 @@
+html{
+	background-image: url('/images/bg.jpg');
+	background-size: cover; 
+}
+
+body {
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+  
+  place-items:center;
+  margin-top:100px
+}
+
+.container {
+  max-width: 400px;
+   margin: 50px auto; 
+  padding: 20px;  
+  background-color:#11111082;;
+  border-radius: 15px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+ }
+
+.container h2 {
+  text-align: center;
+  color: white;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.container label {
+  margin-top: 10px;
+  color: white;
+}
+
+.container input[type="email"],
+.container input[type="password"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.container input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #080101;
+  color: #dac7c7;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.container input[type="submit"]:hover {
+  background-color: #555;
+}
