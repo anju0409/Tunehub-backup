@@ -7,7 +7,7 @@
 </head>
 <body>
 <h2>SooThInG MuSIc</h2>
-    <div class="view">
+    <!-- <div class="view">
       <table border="1">
         <thead>
           <tr>
@@ -31,6 +31,40 @@
           </tr>
         </tbody>
       </table>
-    </div>
+    </div> -->
+    
+    
+    
+    
+    <div class="view">
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Playlist Name:</th>
+        <th>Songs</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr th:each="playlist:${allplaylist}">
+        <td th:text="${playlist.id}"></td>
+        <td th:text="${playlist.name}"></td>
+        <td>
+          <ul>
+            <li th:each="song:${playlist.songs}">
+              <p th:text="${song.name}"></p>
+              <audio controls>
+                <source th:src="${song.link}" />
+              </audio>
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
   </body>
 </html>
+      
+ 

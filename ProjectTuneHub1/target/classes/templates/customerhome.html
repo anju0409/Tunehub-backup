@@ -1,57 +1,37 @@
 <!DOCTYPE html>
 <html xmlns:th="https://thymeleaf.org">
-  <head>
-    <meta charset="UTF-8" />
-    <title>CUSTOMER HOME</title>
-    <link rel="stylesheet" type="text/css" th:href="@{/customerhome.css}">
-  </head>
-  <body>
-    <div class="cust">
-      <p>CUSTOMER HOME</p>
+<head>
+<meta charset="UTF-8" />
+<title>CUSTOMER HOME</title>
+<link rel="stylesheet" type="text/css" th:href="@{/customerhome.css}">
+</head>
+<body>
+	<div class="customer-container">
+		<div th:unless="${ispremium}" class="non-premium">
+			<h3>CUSTOMER HOME</h3>
+			<form action="pay">
+				<input type="submit" value="GET PREMIUM" class="get" />
+			</form>
+			<form action="logout">
+				<input type="submit" value="LOGOUT" class="logout" />
+			</form>
+		</div>
 
-      <!-- <form action="playsongs">
-        <input type="submit" value="PLAY SONGS" />
-        <br /><br />
-      </form> -->
-
-      <div th:unless="${ispremium}" class="non-premium">
-      <form action="pay">
-        <input type="submit" value="GET PREMIUM" class="get" />
-        <br /><br />
-      </form>
-      <br />
-      <form action="logout">
-        <input type="submit" value="LOGOUT" />
-      </form>
-      <br />
-      </div>
-      
-      
-      <div th:if="${ispremium}" class="premium">
-      <table border="1">
-        <thead>
-          <tr>
-            <th>NAME</th>
-            <th>ARTIST</th>
-            <th>GENRE</th>
-            <th>PLAY</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr th:each="songs:${songs}">
-            <td th:text="${songs.name}"></td>
-            <td th:text="${songs.artist}"></td>
-            <td th:text="${songs.genre}"></td>
-            <td>
-              <audio controls>
-                <source th:src="${songs.link}" />
-              </audio>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      </div>
-      
-    </div>
-  </body>
+		<div th:if="${ispremium}" class="premium">
+			<div class="song-list">
+				<div class="song" th:each="songs:${songs}">
+					<div class="song-details">
+						<p th:text="${songs.name}"></p>
+						<p th:text="${songs.artist}"></p>
+						<p th:text="${songs.genre}"></p>
+					</div>
+					<audio controls>
+						<source th:src="${songs.link}" />
+					</audio>
+				</div>
+			</div>
+		</div>
+		</div>
+</body>
 </html>
+

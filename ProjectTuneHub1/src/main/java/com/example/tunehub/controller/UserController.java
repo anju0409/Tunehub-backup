@@ -72,6 +72,7 @@ public class UserController {
 		session.invalidate();
 		return "login";
 	}
+	
 
 
 }

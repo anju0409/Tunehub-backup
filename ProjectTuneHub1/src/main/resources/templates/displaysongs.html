@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" th:href="@{/displaysongs.css}">
 </head>
 <body>
-    <div class="display">
+    <!-- <div class="display">
       <table border="1">
         <thead>
           <tr>
@@ -29,6 +29,17 @@
           </tr>
         </tbody>
       </table>
+    </div> -->
+    <div class="display">
+      <div class="song" th:each="songs:${songs}">
+        <p th:text="${songs.name}"></p>
+        <p th:text="${songs.artist}"></p>
+        <p th:text="${songs.genre}"></p>
+        <audio controls>
+          <source th:src="${songs.link}" />
+        </audio>
+      </div>
     </div>
+    
   </body>
 </html>

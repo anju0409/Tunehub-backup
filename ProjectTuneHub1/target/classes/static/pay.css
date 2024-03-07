@@ -1,6 +1,9 @@
+html {
+  background-image: url('/images/bg.jpg');
+  background-size: cover; 
+}
 body {
   font-family: Arial, sans-serif;
-  background-color: black;
   margin: 0;
   padding: 0;
   display: grid;
@@ -22,7 +25,7 @@ h2 {
 }
 
 p {
-  color: black;
+  color: white;;
   font-size: medium;
   text-align: center;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -63,7 +66,7 @@ input[type="tel"] {
   box-sizing: border-box;
 }
 .pay {
-  background-color: darkslateblue;
+  background-color::#11111082;
   width: 500px;
   height: 250px;
   border-radius: 10px;

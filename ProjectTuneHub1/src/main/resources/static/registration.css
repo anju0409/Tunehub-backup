@@ -1,14 +1,19 @@
+html {
+  background-image: url('/images/bg.jpg');
+  background-size: cover; 
+}
+
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
   margin: 0;
   padding: 0;
-  background-color: black;
+  
 }
 
 .reg {
   max-width: 400px;
   margin: 50px auto;
-  background-color:darkslateblue;
+  background-color:#11111082;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

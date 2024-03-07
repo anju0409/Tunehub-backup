@@ -1,12 +1,17 @@
+html{
+	background-image: url('/images/bg.jpg');
+	background-size: cover; 
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #0a0a0a;
+  
 }
 
 .add {
-  background-color: darkslateblue;
+  background-color:#11111082;
   max-width: 400px;
   margin: 20px auto;
   padding: 20px;
@@ -20,12 +25,12 @@ h2 {
   font-size: xx-large;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  color: #343a40;
+  color:#fff;
 }
 
 label {
   font-weight: bold;
-  color: #0d0d0d;
+  color:#fff;
 }
 
 input[type="text"] {
@@ -36,6 +41,9 @@ input[type="text"] {
   border: 1px solid #ced4da;
   border-radius: 5px;
   box-sizing: border-box;
+  background-color:inherit;
+  color:white;
+  
 }
 
 input[type="submit"] {

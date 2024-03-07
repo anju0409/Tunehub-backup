@@ -1,4 +1,4 @@
-
+/* 
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -43,3 +43,30 @@ td {
 tbody tr:nth-child(even) {
   background-color: #f8f9fa; 
 }
+ */
+ html{
+	background-image: url('/images/bg.jpg');
+	background-size: cover; 
+}
+ 
+ .display {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 10px;
+  padding: 20px;
+ 
+}
+
+.song {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  font-family: cursive;
+  color:white;
+   border-radius: 10px;
+}
+
+.song audio {
+  width: 100%;
+}
+ 
